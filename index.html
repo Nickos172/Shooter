@@ -30,6 +30,13 @@ body {
 		var bullets;
 		var fireButton;
 		var bulletTimer = 0;
+		
+		//Sound Variables
+		var music;
+		var shootSound;
+		var lossSound;
+		var deathSound;
+		var collisionSound;
 
 		var ACCLERATION = 600;
 		var DRAG = 400;
@@ -42,10 +49,17 @@ body {
 			game.load.baseURL = 'https://Nickos172.github.io/Shooter/';
 			game.load.crossOrigin = 'anonymous';
 			
+			//image preloads
 			game.load.image('starfield', 'assets/starfield.png');
 			game.load.image('ship', 'assets/ship.png');
 			game.load.image('bullet', 'assets/bullets/bullet.png');
 
+			//Sound Preloads
+			game.load.audio('music', ['sounds/Medicated.mp3','sounds/Medicated.ogg']);
+			game.load.audio('shoot', ['sounds/LaserGun.mp3' , 'sounds/LaserGun.ogg']);
+			game.load.audio('loss', ['sounds/Lose.mp3' , 'sounds/Lose.ogg']);
+			game.load.audio('death', ['sounds/GameOver.mp3' , 'sounds/GameOver.ogg']);
+			game.load.audio('collision', ['sounds/Lose.mp3' , 'sounds/Lose.ogg']);
 		}
 
 		function create() {
