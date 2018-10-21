@@ -56,7 +56,11 @@ body {
 
 		function create() {
 			
-			//game.scale.pageAlignHorizontally = true;
+			//Canvas Scaling
+			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
+			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+			this.scale.pageAlignHorizontally = true;
+			this.scale.pageAlignVertically = true
 			
 			//  The scrolling starfield background
 			starfield = game.add.tileSprite(0, 0, 1200, 600, 'starfield');
