@@ -20,8 +20,15 @@ body {
 			create : create,
 			update : update,
 			render : render
-		}, false, false);
-
+		});
+		
+		//initiating cavas scaling
+		Phaser.Canvas.setImageRenderingCrisp(game.canvas)
+		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		this.scale.pageAlignHorizontally = true;
+		this.scale.pageAlignVertically = true
+		
+		
 		var player;
 		var starfield;
 		var cursors;
