@@ -15,18 +15,12 @@ body {
 </head>
 <body>
 	<script type="text/javascript">
-		var game = new Phaser.Game(1200, 600, Phaser.AUTO, 'phaser-demo', {
+		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-demo', {
 			preload : preload,
 			create : create,
 			update : update,
 			render : render
 		});
-		
-		//Canvas Scaling
-		Phaser.Canvas.setImageRenderingCrisp(game.canvas)
-		this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		this.scale.pageAlignHorizontally = true;
-		this.scale.pageAlignVertically = true
 		
 		var player;
 		var starfield;
@@ -57,13 +51,11 @@ body {
 		function create() {
 			
 			//Canvas Scaling
-			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
-			this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			this.scale.pageAlignHorizontally = true;
 			this.scale.pageAlignVertically = true
 			
 			//  The scrolling starfield background
-			starfield = game.add.tileSprite(0, 0, 1200, 600, 'starfield');
+			starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
 			//  Our bullet group
 			bullets = game.add.group();
